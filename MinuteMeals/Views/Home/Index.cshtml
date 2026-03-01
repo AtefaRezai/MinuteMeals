@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MinuteMeals.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Recipes</h2>
+
+<div class="row">
+    @foreach (var recipe in Model)
+    {
+        <partial name="RecipeCardPartial" model="recipe" />
+    }
+</div>
